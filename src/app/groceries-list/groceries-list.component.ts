@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 
 export class GroceryListComponent{
     pageTitle: string = 'Groceries List Component';
+
+    imageWidth = 50;
+    imageMargin = 2;
     groceries: any[] = [
         {   
             "groceryID": 1, 
