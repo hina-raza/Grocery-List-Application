@@ -8,8 +8,11 @@ import { Component } from '@angular/core';
 export class GroceryListComponent{
     pageTitle: string = 'Groceries List Component';
 
-    imageWidth = 50;
-    imageMargin = 2;
+    imageWidth: number = 50;
+    imageMargin: number = 2;
+    showImage: boolean = false;
+    listFilter: string = "cart";
+
     groceries: any[] = [
         {   
             "groceryID": 1, 
@@ -39,4 +42,8 @@ export class GroceryListComponent{
             "imageUrl": "assets/images/watermelon.png"   
         }
     ];
+
+    toggleImage(){
+        this.showImage = !this.showImage;
+    }
 }
