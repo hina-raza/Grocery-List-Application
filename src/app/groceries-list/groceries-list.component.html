@@ -24,26 +24,26 @@
                                 <button class="btn btn-primary" 
                                 (click) = "toggleImage()">{{showImage? 'Hide' : 'Show'}} Image</button>
                             </th>
-                            <th>Item</th>
-                            <th>Code</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
-                            <th>Got It</th>
+                            <th>ITEM</th>
+                            <th>CODE</th>
+                            <th>QUANTITY</th>
+                            <th>PRICE</th>
+                            <th>GOT IT!</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor = "let grocery of groceries">
-                            <td >
-                                <img [src]="grocery.imageUrl" 
+                            <td>
+                                <img id="icons" [src]="grocery.imageUrl" 
                                 *ngIf = "showImage"
                                 [style.width.px]="imageWidth" 
                                 [style.margin.px]="imageMargin">
                             </td>
-                            <td>{{ grocery.groceryName }}</td>
+                            <td class="highlight-text">{{ grocery.groceryName }}</td>
                             <td>{{ grocery.groceryCode | lowercase }}</td>
                             <td>{{ grocery.quantity }}</td>
                             <td>{{ grocery.price | currency : 'CAD' : 'code' }}</td>
-                            <td>{{ grocery.gotIt }}</td>
+                            <td>{{ grocery.gotIt? 'YES' : 'NO' }}</td>
                         </tr>
                     </tbody>
                 </table>
