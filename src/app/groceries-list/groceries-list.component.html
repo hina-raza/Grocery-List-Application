@@ -43,7 +43,7 @@
                             <td>{{ grocery.groceryCode | lowercase }}</td>
                             <td>{{ grocery.quantity }}</td>
                             <td>{{ grocery.price | currency : 'CAD' : 'code' }}</td>
-                            <td>{{ grocery.gotIt? 'YES' : 'NO' }}</td>
+                            <td> <app-check-circle [isChecked] = 'grocery.gotIt'></app-check-circle> </td>
                         </tr>
                     </tbody>
                 </table>
